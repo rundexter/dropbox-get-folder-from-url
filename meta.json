@@ -1,26 +1,17 @@
-/*
- * Metadata describing the module operation
- */
 {
-    //Required. Inputs the module expects.
     "inputs": [
-        //e.g.
-        /*
         {
-            "id": "from",
-            "title":"From"
+            "id": "urls",
+            "title":"URLs",
+            "description": "One or more Dropbox URLs pointing to folders"
         }
-        */
     ],
-    //Required. Outputs the module emits.
     "outputs": [
-      //e.g.
-      /*
         {
-            "id": "from",
-            "title":"From"
+            "id": "folder",
+            "title":"Folder"
         }
-      */
     ],
-    "title": "Dropbox: Get folder from URL" /* Required.A display name for the module */
+    "icon": "dropbox",
+    "title": "Dropbox: Get folder from URL"
 }

@@ -73,7 +73,12 @@ module.exports = _.merge({
              */
             input: {
                 //Replace VAR1 with the name of an expected input, and add more inputs as needed.
-                VAR1: 'foo'
+                urls: [
+                    'https://www.dropbox.com/home/Public/Engagement%20pics',
+                    'http://dropbox.com/Home/Foo/bar',
+                    'https://www.dropbox.com/home',
+                    'https://dropbox.com/account'
+                ]
             }
         }
     }

@@ -1,3 +1,6 @@
+var URL = require('url')
+    , _ = require('lodash')
+;
 module.exports = {
     /**
      * The main entry point for the Dexter module
@@ -6,8 +9,14 @@ module.exports = {
      * @param {AppData} dexter Container for all data used in this workflow.
      */
     run: function(step, dexter) {
-        var results = { foo: 'bar' };
-        //Call this.complete with the module's output.  If there's an error, call this.fail(message) instead.
-        this.complete(results);
+        this.complete(_.compact(_.map(step.input('urls').toArray(), function(url) {
+            var parts = URL.parse(url)
+                , path = parts.path
+            ;
+            if(path && path.toLowerCase().indexOf('/home') === 0) {
+                return unescape(path.replace(/\/home/i, '')) || '/';
+            }
+            return null;
+        })));
     }
 };

@@ -1,7 +1,7 @@
 {
     "name": "dropbox-get-folder-from-url",
     "version": "0.0.1",
-    "description": "",
+    "description": "Get a file folder from a dropbox URL",
     "main": "index.js",
     "author": "Justin Fargione",
     "license": "ISC",
