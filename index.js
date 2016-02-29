@@ -14,7 +14,7 @@ module.exports = {
                 , path = parts.path
             ;
             if(path && path.toLowerCase().indexOf('/home') === 0) {
-                return unescape(path.replace(/\/home/i, '')) || '/';
+                return { 'folder': unescape(path.replace(/\/home/i, '')) || '/' };
             }
             return null;
         })));
